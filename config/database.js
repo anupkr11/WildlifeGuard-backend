@@ -1,8 +1,10 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
 const dbConnect = async () => {
   await mongoose.connect(
-    "mongodb+srv://anup94622:p6lH5fryb0udg2Hc@learningmongo.8gbbg2w.mongodb.net/wildlifeDB",
+    process.env.mongoURI,
   );
   console.log("Connected to MongoDB", mongoose.connection.name);
 };

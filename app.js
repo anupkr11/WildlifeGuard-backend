@@ -10,6 +10,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
+
 app.use("/blog", blogRoutes);
 app.use("/program", programRoutes);
 app.use("/wildlife", wildlifeRoutes);
