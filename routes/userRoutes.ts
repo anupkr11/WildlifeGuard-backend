@@ -1,15 +1,15 @@
-import express from "express";
+import express, { Request, Response } from "express";
 
 const router = express.Router();
 
-router.post("/jointeam", (req, res) => {
+router.post("/jointeam", (req: Request, res: Response) => {
   const { name } = req.body;
   res.json({
     message: `${name}, thank you for showing your interest in joining our team!`,
   });
 });
 
-router.post("/contactus", (req, res) => {
+router.post("/contactus", (req: Request, res: Response) => {
   const { firstName } = req.body;
   res.json({
     message: `${firstName}, Our team will get back to you within 24 hours.`,
